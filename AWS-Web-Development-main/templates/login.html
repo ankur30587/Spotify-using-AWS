@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ankur BoomPlay - User Login</title>
+<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper-base.min.js" integrity="sha384-N6zYVEkbUOg6ty/6x9+ckss/nd57Lk12Le/8UwuB2U+plTyUJNsjUyyIq3ZnyEn8" crossorigin="anonymous"></script>
+		<script>src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container mt-5">
+        {% with messages = get_flashed_messages() %}
+      	{% if messages %}
+        <div class="container mt-3">
+		{% for message in messages %}
+            	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+              	{{ message }}
+              	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               		<span aria-hidden="true">&times;</span>
+              	</button>
+            	</div>
+          	{% endfor %}
+        </div>
+      	{% endif %}
+   	{% endwith %}
+	<div style = "margin-bottom:3%;">
+       		<h3>Login</h3>
+	</div>
+
+        <form method="POST">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    	<!---Link to registration------------------------------------------------------------------------->
+    	<div style = "margin-top:3%;">
+		<a href = "{{url_for('register')}}" class = "btn btn-success">
+			Click here to register as a user
+		</a>
+    	</div>
+
+    </div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-6piBkDjLW9U3mdfS0nBgzGAPZfNv3m2aeN4LEHiaX6J7FTh5Bq6I/PIsS8M6Dk3J" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.3/dist/umd/popper.min.js" integrity="sha384-E3xDEs8W0sQs25wM/0QxO+O/hgKb+e/mBS0NaH/gikUm9LgCZ54mYDyHcMIx5oFn" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

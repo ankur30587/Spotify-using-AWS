@@ -1,0 +1,5 @@
+{
+	"operation": "retrieve_all_music",
+	"tableName": "music"
+}
+

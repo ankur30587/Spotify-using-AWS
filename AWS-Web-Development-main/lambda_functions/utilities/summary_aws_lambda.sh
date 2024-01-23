@@ -1,0 +1,7 @@
+aws lambda create-function --function-name add_subscription --runtime python3.8 --role arn:aws:iam::360758219905:role/LabRole --handler add_subscription.lambda_handler --region us-east-1 --zip-file fileb://add_subscription.zip
+aws lambda create-function --function-name retrieve_user --runtime python3.8 --role arn:aws:iam::360758219905:role/LabRole --handler retrieve_user.lambda_handler --region us-east-1 --zip-file fileb://retrieve_user.zip
+aws lambda create-function --function-name add_user --runtime python3.8 --role arn:aws:iam::360758219905:role/LabRole --handler add_user.lambda_handler --region us-east-1 --zip-file fileb://add_user.zip
+aws lambda create-function --function-name all_songs --runtime python3.8 --role arn:aws:iam::360758219905:role/LabRole --handler all_songs.lambda_handler --region us-east-1 --zip-file fileb://all_songs.zip
+aws lambda create-function --function-name delete_subscription --runtime python3.8 --role arn:aws:iam::360758219905:role/LabRole --handler delete_subscription.lambda_handler --region us-east-1 --zip-file fileb://delete_subscription.zip
+aws lambda create-function --function-name unsubscribed --runtime python3.8 --role arn:aws:iam::360758219905:role/LabRole --handler unsubscribed.lambda_handler --region us-east-1 --zip-file fileb://unsubscribed.zip
+aws lambda create-function --function-name user_subscription --runtime python3.8 --role arn:aws:iam::360758219905:role/LabRole --handler user_subscription.lambda_handler --region us-east-1 --zip-file fileb://user_subscription.zip
